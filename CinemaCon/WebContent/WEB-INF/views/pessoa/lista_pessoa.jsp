@@ -47,11 +47,13 @@
 					<table class="table">
 						<tbody>
 							<c:if test="${empty pessoas}">
-								<h2 class="text-warning col-md-offset-4">Não há nenhuma pessoa!</h2>
+								<h2 class="text-warning col-md-offset-4">Não há nenhuma
+									pessoa!</h2>
 							</c:if>
 							<c:if test="${not empty pessoas}">
 								<c:forEach var="p" items="${pessoas}">
 									<tr>
+										<td style="display:none;">${ p.id }</td>
 										<td>${ p.nome }</td>
 										<td>${ p.sobrenome }</td>
 										<td>${ p.dataNascimento }</td>
