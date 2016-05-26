@@ -3,12 +3,15 @@ package br.ufc.model;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+
+import org.hibernate.annotations.Cascade;
 
 import br.ufc.stub.Filme;
 
@@ -24,9 +27,17 @@ public class Pessoa {
 	@Column(name="local_nascimento")
 	private String localNascimento;
 	private String descricao;
+	
 	@ManyToMany
 	private List<Filme> filmes;
 	
+	
+	public List<Filme> getFilmes() {
+		return filmes;
+	}
+	public void setFilmes(List<Filme> filmes) {
+		this.filmes = filmes;
+	}
 	public Long getId() {
 		return id;
 	}

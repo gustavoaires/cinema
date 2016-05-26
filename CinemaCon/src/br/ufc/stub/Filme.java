@@ -18,4 +18,19 @@ public class Filme {
 	private Long id;
 	@ManyToMany(/* TODO */)
 	private List<Pessoa> pessoas;
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public List<Pessoa> getPessoas() {
+		return pessoas;
+	}
+	public void setPessoas(List<Pessoa> pessoas) {
+		this.pessoas = pessoas;
+	}
+	
+	
+	
 }

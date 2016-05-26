@@ -9,6 +9,8 @@
 <body>
 
 <h1>TESTE</h1>
-<a href="cadastrarPessoa">clique</a>
+<a href="cadastrarPessoa">clique</a><br/>
+<a href="visualizarPessoa?id=1">visualizar Pessoa 1</a><br/>
+<a href="visualizarPessoa?id=2">visualuzar pessoa 2</a>
 </body>
 </html>
