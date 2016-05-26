@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -41,37 +41,36 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<form role="form" method="post" action="alteraPessoaFormulario">
+                    <form role="form" method="post" action="alteraPessoaFormulario">
 						<div class="form-group">
-							<input class="form-control" name="id" 
-							type="hidden" value="${pessoa.id}">
-						<div/>
-					
+							<input class="form-control" name="id" type="hidden"
+ 								value="${pessoa.id}">	
+						</div>
 						<div class="form-group">
-							<label class="control-label" for="nome">Nome</label>
-							<input class="form-control" name="nome"
+							<label class="control-label" for="nome">Nome</label> <input
+ 								class="form-control" name="nome" required="required"
 								value="${pessoa.nome}" type="text">
 						</div>
 						<div class="form-group">
-							<label class="control-label" for="sobrenome">Sobrenome</label>
-							<input class="form-control" name="sobrenome"
+							<label class="control-label" for="sobrenome">Sobrenome</label> <input
+ 								class="form-control" name="sobrenome" required="required"
 								value="${pessoa.sobrenome}" type="text">
 						</div>
 						<div class="form-group">
-							<label class="control-label">Data de nascimento</label> 
-							<input
-								class="form-control" type="text" name="dataNascimento" 
+							<label class="control-label">Data de nascimento</label> <input
+ 								class="form-control" type="text" name="dataNascimento"
+ 								required="required" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" 
 								value="${pessoa.dataNascimento}">
 						</div>
 						<div class="form-group">
-							<label class="control-label">Local de nascimento</label> 
-							<input
+							<label class="control-label">Local de nascimento</label> <input 
 								class="form-control" type="text" name="localNascimento"
-								value="${pessoa.localNascimento}">
+								required="required" value="${pessoa.localNascimento}">
 						</div>
 						<div class="form-group">
 							<label class="control-label">Descrição</label>
-							<textarea class="form-control" name="descricao" value="${pessoa.descricao}"></textarea>
+							<textarea class="form-control" name="descricao"
+ 								value="${pessoa.descricao}"></textarea>
 						</div>
 						<button type="submit" class="btn btn-lg btn-primary">Alterar</button>
 					</form>
