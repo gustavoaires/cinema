@@ -1,10 +1,12 @@
 package br.ufc.controller;
 
-import javax.transaction.Transactional;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,14 +34,8 @@ public class PessoaController {
 	
 	@RequestMapping("/cadastroPessoaFormulario")
 	public String cadastroPessoaFormulario(Pessoa pessoa, BindingResult result) {
-		if (pessoa != null) {
-			System.out.println(pessoa.getNome());
-			System.out.println(pessoa.getSobrenome());
-			System.out.println(pessoa.getDataNascimento());
-			System.out.println(pessoa.getLocalNascimento());
-			System.out.println(pessoa.getDescricao());
+		if (pessoa != null)
 			daoPessoa.inserir(pessoa);
-		}
 		return "pessoa/inserido_ok";
 	}
 	
@@ -51,7 +47,9 @@ public class PessoaController {
 	}
 	
 	@RequestMapping("/listarPessoa")
-	public String listarPessoa() {
+	public String listarPessoa(Model model) {
+		List<Pessoa> pessoas = daoPessoa.listar();
+		model.addAttribute("pessoas", pessoas);
 		return "pessoa/lista_pessoa";
 	}
 	
