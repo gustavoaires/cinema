@@ -43,6 +43,11 @@
 				<div class="col-md-12">
 					<form role="form" method="post" action="alteraPessoaFormulario">
 						<div class="form-group">
+							<input class="form-control" name="id" 
+							type="hidden" value="${pessoa.id}">
+						<div/>
+					
+						<div class="form-group">
 							<label class="control-label" for="nome">Nome</label>
 							<input class="form-control" name="nome"
 								value="${pessoa.nome}" type="text">
