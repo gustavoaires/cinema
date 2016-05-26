@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,10 +15,9 @@
 <link
 	href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
 	rel="stylesheet" type="text/css">
-<title>Pessoa inserida</title>
+<title>Alterar Pessoa</title>
 </head>
 <body>
-</body>
 	<div class="navbar navbar-default navbar-static-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -38,5 +37,42 @@
 			</div>
 		</div>
 	</div>
-	<h2 class="text-success col-md-offset-4">Pessoa cadastrada com sucesso!</h2>
+	<div class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<form role="form" method="post" action="alteraPessoaFormulario">
+						<div class="form-group">
+							<label class="control-label" for="nome">Nome</label>
+							<input class="form-control" name="nome"
+								value="${pessoa.nome}" type="text">
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="sobrenome">Sobrenome</label>
+							<input class="form-control" name="sobrenome"
+								value="${pessoa.sobrenome}" type="text">
+						</div>
+						<div class="form-group">
+							<label class="control-label">Data de nascimento</label> 
+							<input
+								class="form-control" type="text" name="dataNascimento" 
+								value="${pessoa.dataNascimento}">
+						</div>
+						<div class="form-group">
+							<label class="control-label">Local de nascimento</label> 
+							<input
+								class="form-control" type="text" name="localNascimento"
+								value="${pessoa.localNascimento}">
+						</div>
+						<div class="form-group">
+							<label class="control-label">Descrição</label>
+							<textarea class="form-control" name="descricao" value="${pessoa.descricao}"></textarea>
+						</div>
+						<button type="submit" class="btn btn-lg btn-primary">Alterar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
 </html>
