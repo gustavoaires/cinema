@@ -55,7 +55,7 @@
 									<td>${ p.descricao }</td>
 									<td><a href="visualizarPessoa?id=${ p.id }">VISUALIZAR</a></td>
 									<td><a href="alterarPessoa?id=${ p.id }">ALTERAR</a></td>
-									<td><a href="apagarPessoa?id=${ p.id }"></a>REMOVER</td>
+									<td><a href="apagarPessoa?id=${ p.id }">REMOVER</a></td>
 								</tr>
 							</c:forEach>
 						</tbody>
