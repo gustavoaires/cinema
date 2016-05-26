@@ -14,6 +14,11 @@ import br.ufc.model.Pessoa;
 @Controller
 public class PessoaController {
 
+	/*
+	 * TODO
+	 * Fazer os requests e testar cada
+	 */
+	
 	@Autowired
 	@Qualifier(value="pessoaDAO")
 	private IPessoaDAO daoPessoa;
@@ -26,6 +31,21 @@ public class PessoaController {
 	@RequestMapping("/cadastroPessoaFormulario")
 	public String cadastroPessoaFormulario(Pessoa pessoa) {
 		daoPessoa.inserir(pessoa);
-		return "pessoa/cadastro_pessoa";
+		return "pessoa/cadastra_pessoa";
+	}
+	
+	@RequestMapping("/alterarPessoa")
+	public String alterarPessoa(){
+		return "pessoa/altera_pessoa";
+	}
+	
+	@RequestMapping("/listarPessoa")
+	public String listarPessoa() {
+		return "pessoa/lista_pessoa";
+	}
+	
+	@RequestMapping("/visualizarPessoa")
+	public String visualizarPessoa() {
+		return "pessoa/visualiza_pessoa";
 	}
 }
