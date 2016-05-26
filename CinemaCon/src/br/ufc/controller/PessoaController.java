@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.ufc.dao.IPessoaDAO;
@@ -24,7 +23,7 @@ public class PessoaController {
 	 */
 	
 	@Autowired
-	@Qualifier(value="pessoaDAO")
+	@Qualifier(value = "pessoaDAO")
 	private IPessoaDAO daoPessoa;
 	
 	@RequestMapping("/cadastrarPessoa")
@@ -33,9 +32,8 @@ public class PessoaController {
 	}
 	
 	@RequestMapping("/cadastroPessoaFormulario")
-	public String cadastroPessoaFormulario(Pessoa pessoa, BindingResult result) {
-		if (pessoa != null)
-			daoPessoa.inserir(pessoa);
+	public String cadastroPessoaFormulario(Pessoa pessoa) {
+		daoPessoa.inserir(pessoa);
 		return "pessoa/inserido_ok";
 	}
 	
@@ -44,6 +42,18 @@ public class PessoaController {
 		Pessoa pessoa = daoPessoa.recuperar(id);
 		model.addAttribute("pessoa", pessoa);
 		return "pessoa/altera_pessoa";
+	}
+	
+	@RequestMapping("/alteraPessoaFormulario")
+	public String alteraPessoaFormulario(Pessoa pessoa) {
+		daoPessoa.alterar(pessoa);
+		return "redirect:listarPessoa";
+	}
+	
+	@RequestMapping("/apagarPessoa")
+	public String apagarPessoa(Long id) {
+		daoPessoa.apagar(id);
+		return "redirect:listarPessoa";
 	}
 	
 	@RequestMapping("/listarPessoa")
