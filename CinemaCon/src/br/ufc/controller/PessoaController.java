@@ -16,11 +16,6 @@ import br.ufc.model.Pessoa;
 @Transactional
 @Controller
 public class PessoaController {
-
-	/*
-	 * TODO
-	 * Fazer os requests e testar cada
-	 */
 	
 	@Autowired
 	@Qualifier(value = "pessoaDAO")
@@ -64,7 +59,9 @@ public class PessoaController {
 	}
 	
 	@RequestMapping("/visualizarPessoa")
-	public String visualizarPessoa() {
+	public String visualizarPessoa(Long id, Model model) {
+		Pessoa pessoa = daoPessoa.recuperar(id);
+		model.addAttribute("pessoa", pessoa);
 		return "pessoa/visualiza_pessoa";
 	}
 }

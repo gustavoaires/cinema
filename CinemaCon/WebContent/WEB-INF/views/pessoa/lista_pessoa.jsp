@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 
@@ -47,7 +47,7 @@
 					<table class="table">
 						<tbody>
 							<c:if test="${empty pessoas}">
-								<h2 class="text-warning col-md-offset-4">Não há nenhuma
+								<h2 class="text-warning col-md-offset-4">NÃ£o hÃ¡ nenhuma
 									pessoa!</h2>
 							</c:if>
 							<c:if test="${not empty pessoas}">
