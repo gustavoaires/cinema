@@ -5,6 +5,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.ufc.dao.IPessoaDAO;
@@ -31,11 +32,13 @@ public class PessoaController {
 	@RequestMapping("/cadastroPessoaFormulario")
 	public String cadastroPessoaFormulario(Pessoa pessoa) {
 		daoPessoa.inserir(pessoa);
-		return "pessoa/cadastra_pessoa";
+		return "pessoa/inserido_ok";
 	}
 	
 	@RequestMapping("/alterarPessoa")
-	public String alterarPessoa(){
+	public String alterarPessoa(Long id, Model model) {
+		Pessoa pessoa = daoPessoa.recuperar(id);
+		model.addAttribute("pessoa", pessoa);
 		return "pessoa/altera_pessoa";
 	}
 	
