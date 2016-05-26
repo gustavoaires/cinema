@@ -5,8 +5,11 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import org.springframework.stereotype.Repository;
+
 import br.ufc.model.Pessoa;
 
+@Repository
 public class PessoaDAO implements IPessoaDAO {
 
 	@PersistenceContext
@@ -15,6 +18,7 @@ public class PessoaDAO implements IPessoaDAO {
 	@Override
 	public void inserir(Pessoa pessoa) {
 		manager.persist(pessoa);
+		System.out.println("Inserido!");
 	}
 
 	@Override

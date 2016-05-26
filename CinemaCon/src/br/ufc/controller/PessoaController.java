@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.ufc.dao.IPessoaDAO;
@@ -30,8 +31,15 @@ public class PessoaController {
 	}
 	
 	@RequestMapping("/cadastroPessoaFormulario")
-	public String cadastroPessoaFormulario(Pessoa pessoa) {
-		daoPessoa.inserir(pessoa);
+	public String cadastroPessoaFormulario(Pessoa pessoa, BindingResult result) {
+		if (pessoa != null) {
+			System.out.println(pessoa.getNome());
+			System.out.println(pessoa.getSobrenome());
+			System.out.println(pessoa.getDataNascimento());
+			System.out.println(pessoa.getLocalNascimento());
+			System.out.println(pessoa.getDescricao());
+			daoPessoa.inserir(pessoa);
+		}
 		return "pessoa/inserido_ok";
 	}
 	

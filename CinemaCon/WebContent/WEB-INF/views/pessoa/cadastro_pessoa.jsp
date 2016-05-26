@@ -44,27 +44,29 @@
 				<div class="col-md-12">
 					<form role="form" method="post" action="cadastroPessoaFormulario">
 						<div class="form-group">
-							<label class="control-label" for="exampleInputEmail1">Nome</label>
-							<input class="form-control" id="exampleInputEmail1"
+							<label class="control-label" for="nome">Nome</label>
+							<input class="form-control" name="nome"
 								placeholder="Nome" type="text">
 						</div>
 						<div class="form-group">
 							<label class="control-label" for="exampleInputPassword1">Sobrenome</label>
-							<input class="form-control" id="exampleInputPassword1"
+							<input class="form-control" name="sobrenome"
 								placeholder="Sobrenome" type="text">
 						</div>
 						<div class="form-group">
-							<label class="control-label">Data de nascimento</label> <input
-								class="form-control" type="text" placeholder="15/12/1989">
+							<label class="control-label">Data de nascimento</label> 
+							<input
+								name="dataNascimento" class="form-control" type="text" placeholder="15/12/1989">
 						</div>
 						<div class="form-group">
-							<label class="control-label">Local de nascimento</label> <input
-								class="form-control" type="text"
+							<label class="control-label">Local de nascimento</label> 
+							<input
+								class="form-control" type="text" name="localNascimento"
 								placeholder="Local de nascimento">
 						</div>
 						<div class="form-group">
 							<label class="control-label">Descrição</label>
-							<textarea class="form-control" placeholder="Descrição"></textarea>
+							<textarea class="form-control" placeholder="Descrição" name="descricao"></textarea>
 						</div>
 						<button type="submit" class="btn btn-lg btn-primary">Salvar</button>
 					</form>
