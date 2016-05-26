@@ -46,18 +46,23 @@
 				<div class="col-md-12">
 					<table class="table">
 						<tbody>
-							<c:forEach var="p" items="${pessoas}">
-								<tr>
-									<td>${ p.nome }</td>
-									<td>${ p.sobrenome }</td>
-									<td>${ p.dataNascimento }</td>
-									<td>${ p.localNascimento }</td>
-									<td>${ p.descricao }</td>
-									<td><a href="visualizarPessoa?id=${ p.id }">VISUALIZAR</a></td>
-									<td><a href="alterarPessoa?id=${ p.id }">ALTERAR</a></td>
-									<td><a href="apagarPessoa?id=${ p.id }">REMOVER</a></td>
-								</tr>
-							</c:forEach>
+							<c:if test="${empty pessoas}">
+								<h2 class="text-warning col-md-offset-4">Não há nenhuma pessoa!</h2>
+							</c:if>
+							<c:if test="${not empty pessoas}">
+								<c:forEach var="p" items="${pessoas}">
+									<tr>
+										<td>${ p.nome }</td>
+										<td>${ p.sobrenome }</td>
+										<td>${ p.dataNascimento }</td>
+										<td>${ p.localNascimento }</td>
+										<td>${ p.descricao }</td>
+										<td><a href="visualizarPessoa?id=${ p.id }">VISUALIZAR</a></td>
+										<td><a href="alterarPessoa?id=${ p.id }">ALTERAR</a></td>
+										<td><a href="apagarPessoa?id=${ p.id }">REMOVER</a></td>
+									</tr>
+								</c:forEach>
+							</c:if>
 						</tbody>
 					</table>
 				</div>
