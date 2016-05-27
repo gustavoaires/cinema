@@ -18,6 +18,7 @@ import br.ufc.dao.IPessoaDAO;
 import br.ufc.model.Pessoa;
 import junit.framework.Assert;
 
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"file:WebContent/WEB-INF/spring-context.xml"})
 @Transactional
