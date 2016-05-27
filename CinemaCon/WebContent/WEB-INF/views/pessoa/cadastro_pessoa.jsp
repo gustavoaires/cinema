@@ -51,7 +51,7 @@
 						<div class="form-group">
 							<label class="control-label">Sobrenome</label> <input
 								class="form-control" name="sobrenome" required="required"
-								placeholder="Sobrenome" type="text">
+								placeholder="Sobrenome" type="text" pattern="[a-zA-Z]*">
 						</div>
 						<div class="form-group">
 							<label class="control-label">Data de nascimento</label> <input
