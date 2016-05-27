@@ -18,7 +18,6 @@ public class PessoaDAO implements IPessoaDAO {
 	@Override
 	public void inserir(Pessoa pessoa) {
 		manager.persist(pessoa);
-		System.out.println("Inserido!");
 	}
 
 	@Override

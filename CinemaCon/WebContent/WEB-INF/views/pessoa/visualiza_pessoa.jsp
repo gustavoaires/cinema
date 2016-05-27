@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <title>${pessoa.nome} ${pessoa.sobrenome}</title>
@@ -23,13 +23,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
-					<h1>${pessoa.nome}</h1>
-					<h1>${pessoa.sobrenome}</h1>
-					<h3>
+					<h3>${pessoa.nome}</h3>
+					<h3>${pessoa.sobrenome}</h3>
+					<h4>
 						<b>Data de Nascimento: </b>${pessoa.dataNascimento} <br>Local
 						de Nascimento: ${pessoa.localNascimento}
-					</h3>
-					<p>${pessoa.descricao}</p>
+					</h4>
+					<h3><p>${pessoa.descricao}</p></h3>
 				</div>
 			</div>
 		</div>
@@ -40,7 +40,7 @@
 			<div class="container table-responsive">
 				<div class="row">
 					<div class="col-md-12">
-						<table class="table table-striped">
+						<table class="table table-striped table-hover">
 							<thead>
 								<tr>
 									<th>Filme</th>
@@ -66,7 +66,7 @@
 		</div>
 	</c:if>
 	<c:if test="${empty pessoa.filmes}">
-		<h2 class="text-warning col-md-offset-3">Essa pessoa ainda não possui filmes no sistema :(</h2>
+		<h2 class="text-warning col-md-offset-3">Esta pessoa ainda não possui filmes no sistema :(</h2>
 	</c:if>
 	
 </body>

@@ -41,10 +41,10 @@
 		</div>
 	</div>
 	<div class="section">
-		<div class="container">
+		<div class="container table-responsive">
 			<div class="row">
 				<div class="col-md-12">
-					<table class="table">
+					<table class="table table-striped table-hover">
 						<tbody>
 							<c:if test="${empty pessoas}">
 								<h2 class="text-warning col-md-offset-4">Não há nenhuma
@@ -59,9 +59,15 @@
 										<td>${ p.dataNascimento }</td>
 										<td>${ p.localNascimento }</td>
 										<td>${ p.descricao }</td>
-										<td><a href="visualizarPessoa?id=${ p.id }">VISUALIZAR</a></td>
-										<td><a href="alterarPessoa?id=${ p.id }">ALTERAR</a></td>
-										<td><a href="apagarPessoa?id=${ p.id }">REMOVER</a></td>
+										<td><a class="text-success" href="visualizarPessoa?id=${ p.id }">
+											VISUALIZAR</a>
+										</td>
+										<td><a class="text-warning" href="alterarPessoa?id=${ p.id }">
+											ALTERAR</a>
+										</td>
+										<td><a class="text-danger" href="apagarPessoa?id=${ p.id }">
+											REMOVER</a>
+										</td>
 									</tr>
 								</c:forEach>
 							</c:if>

@@ -49,12 +49,12 @@
 						<div class="form-group">
 							<label class="control-label" for="nome">Nome</label> <input
 								class="form-control" name="nome" required="required"
-								value="${pessoa.nome}" type="text">
+								pattern="([a-zA-Z]+[ ]?)*" value="${pessoa.nome}" type="text">
 						</div>
 						<div class="form-group">
 							<label class="control-label" for="sobrenome">Sobrenome</label> <input
 								class="form-control" name="sobrenome" required="required"
-								value="${pessoa.sobrenome}" type="text">
+								value="${pessoa.sobrenome}" type="text" pattern="([a-zA-Z0-9]+[ ]?)*">
 						</div>
 						<div class="form-group">
 							<label class="control-label">Data de nascimento</label> <input
@@ -65,12 +65,11 @@
 						<div class="form-group">
 							<label class="control-label">Local de nascimento</label> <input
 								class="form-control" type="text" name="localNascimento"
-								required="required" value="${pessoa.localNascimento}">
+								required="required" value="${pessoa.localNascimento}" pattern="([a-zA-Z]+[ ]?)*">
 						</div>
 						<div class="form-group">
 							<label class="control-label">Descrição</label>
-							<textarea class="form-control" name="descricao"
-								value="${pessoa.descricao}"></textarea>
+							<textarea class="form-control" name="descricao">${pessoa.descricao}</textarea>
 						</div>
 						<button type="submit" class="btn btn-lg btn-primary">Alterar</button>
 					</form>
