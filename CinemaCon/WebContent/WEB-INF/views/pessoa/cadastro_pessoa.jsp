@@ -51,7 +51,7 @@
 						<div class="form-group">
 							<label class="control-label">Sobrenome</label> <input
 								class="form-control" name="sobrenome" required="required"
-								placeholder="Sobrenome" type="text" pattern="([a-zA-Z]+[ ]?[\d]*)*">
+								placeholder="Sobrenome" type="text" pattern="([a-zA-Z0-9]+[ ]?)*">
 						</div>
 						<div class="form-group">
 							<label class="control-label">Data de nascimento</label> <input

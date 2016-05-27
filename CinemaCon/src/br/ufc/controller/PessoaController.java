@@ -35,8 +35,12 @@ public class PessoaController {
 	@RequestMapping("/alterarPessoa")
 	public String alterarPessoa(Long id, Model model) {
 		Pessoa pessoa = daoPessoa.recuperar(id);
-		model.addAttribute("pessoa", pessoa);
-		return "pessoa/altera_pessoa";
+		if (pessoa != null) {
+			model.addAttribute("pessoa", pessoa);
+			return "pessoa/altera_pessoa";
+		} else {
+			return "redirect:listarPessoa";
+		}
 	}
 	
 	@RequestMapping("/alteraPessoaFormulario")

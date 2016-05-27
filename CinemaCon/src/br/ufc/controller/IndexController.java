@@ -8,6 +8,6 @@ public class IndexController {
 
 	@RequestMapping("/")
 	public String home() {
-		return "redirect:cadastrarPessoa";
+		return "redirect:listarPessoa";
 	}
 }
