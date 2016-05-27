@@ -39,8 +39,16 @@ public class PessoaDAO implements IPessoaDAO {
 	}
 
 	@Override
-	public void apagar(Long id) {
-		Pessoa pessoa = recuperar(id);
-		manager.remove(pessoa);
+	public boolean apagar(Long id) {
+		try {
+			Pessoa pessoa = recuperar(id);
+			if (pessoa != null) {
+				manager.remove(pessoa);
+				return true;
+			}
+			return false;
+		} catch(Exception e) {
+			return false;
+		}
 	}
 }

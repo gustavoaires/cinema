@@ -10,5 +10,5 @@ public interface IPessoaDAO {
 	public Pessoa recuperar(Long id);
 	public void alterar(Pessoa pessoa);
 	public List<Pessoa> listar();
-	public void apagar(Long id);
+	public boolean apagar(Long id);
 }

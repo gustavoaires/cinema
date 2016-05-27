@@ -50,8 +50,10 @@ public class PessoaController {
 	
 	@RequestMapping("/apagarPessoa")
 	public String apagarPessoa(Long id) {
-		daoPessoa.apagar(id);
-		return "redirect:listarPessoa";
+		if (daoPessoa.apagar(id))
+			return "redirect:listarPessoa";
+		else
+			return "redirect:erro";
 	}
 	
 	@RequestMapping("/listarPessoa")

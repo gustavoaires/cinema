@@ -1,5 +1,6 @@
 package br.ufc.stub;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -32,11 +33,11 @@ public class Filme {
 	private String sinopse;
 	
 	public String getSinopse() {
-		return sinopse;
+		return "";
 	}
 	public void setSinopse(String sinopse) {}
 	public List<Pessoa> getPessoas() {
-		return null;
+		return new ArrayList<>();
 	}
 	public void setPessoas(List<Pessoa> pessoas) {}
 	public String getGenero() {
@@ -44,23 +45,23 @@ public class Filme {
 	}
 	public void setGenero(String genero) {}
 	public Double getDuracao() {
-		return null;
+		return 1D;
 	}
 	public void setDuracao(Double duracao) {}
 	public Integer getClassificacao() {
-		return null;
+		return 1;
 	}
 	public void setClassificacao(Integer classificacao) {}
 	public String getDistribuidora() {
-		return null;
+		return "";
 	}
 	public void setDistribuidora(String distribuidora) {}
 	public String getIdioma() {
-		return null;
+		return "";
 	}
 	public void setIdioma(String idioma) {}
 	public Long getId() {
-		return null;
+		return 1L;
 	}
 	public String getNome() {
 		return null;
