@@ -18,12 +18,15 @@ import br.ufc.dao.IPessoaDAO;
 import br.ufc.model.Pessoa;
 import junit.framework.Assert;
 
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"file:WebContent/WEB-INF/spring-context.xml"})
 @Transactional
 @TransactionConfiguration(defaultRollback=false)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Testes_DAO extends AbstractTransactionalJUnit4SpringContextTests {
+	
+	
 	
 	@Autowired
 	private IPessoaDAO pdao;
