@@ -29,7 +29,7 @@ http://www.springframework.org/schema/tx/spring-tx.xsd" >
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost/cinema_con" />
 		<property name="username" value="root" />
-		<property name="password" value="meadoraa4" />
+		<property name="password" value="root" />
 	</bean> 
 	
 	
