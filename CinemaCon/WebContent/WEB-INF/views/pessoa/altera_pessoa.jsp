@@ -65,7 +65,7 @@
 						<div class="form-group">
 							<label class="control-label">Local de nascimento</label> <input
 								class="form-control" type="text" name="localNascimento"
-								required="required" value="${pessoa.localNascimento}">
+								required="required" value="${pessoa.localNascimento}" pattern="[a-zA-Z]+">
 						</div>
 						<div class="form-group">
 							<label class="control-label">Descrição</label>

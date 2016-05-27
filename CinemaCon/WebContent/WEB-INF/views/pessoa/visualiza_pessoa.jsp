@@ -23,13 +23,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
-					<h1>${pessoa.nome}</h1>
-					<h1>${pessoa.sobrenome}</h1>
-					<h3>
+					<h2>${pessoa.nome}</h2>
+					<h2>${pessoa.sobrenome}</h2>
+					<h4>
 						<b>Data de Nascimento: </b>${pessoa.dataNascimento} <br>Local
 						de Nascimento: ${pessoa.localNascimento}
-					</h3>
-					<p>${pessoa.descricao}</p>
+					</h4>
+					<h3><p>${pessoa.descricao}</p></h3>
 				</div>
 			</div>
 		</div>
@@ -66,7 +66,7 @@
 		</div>
 	</c:if>
 	<c:if test="${empty pessoa.filmes}">
-		<h2 class="text-warning col-md-offset-3">Essa pessoa ainda não possui filmes no sistema :(</h2>
+		<h2 class="text-warning col-md-offset-3">Esta pessoa ainda não possui filmes no sistema :(</h2>
 	</c:if>
 	
 </body>
