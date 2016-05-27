@@ -69,8 +69,7 @@
 						</div>
 						<div class="form-group">
 							<label class="control-label">Descrição</label>
-							<textarea class="form-control" name="descricao"
-								value="${pessoa.descricao}"></textarea>
+							<textarea class="form-control" name="descricao">${pessoa.descricao}</textarea>
 						</div>
 						<button type="submit" class="btn btn-lg btn-primary">Alterar</button>
 					</form>
