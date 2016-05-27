@@ -46,12 +46,12 @@
 						<div class="form-group">
 							<label class="control-label" for="nome">Nome</label> <input
 								class="form-control" name="nome" required="required"
-								placeholder="Nome" type="text" pattern="[a-zA-Z] *">
+								placeholder="Nome" type="text" pattern="([a-zA-Z]+[ ]?)*">
 						</div>
 						<div class="form-group">
 							<label class="control-label">Sobrenome</label> <input
 								class="form-control" name="sobrenome" required="required"
-								placeholder="Sobrenome" type="text" pattern="[a-zA-Z] *">
+								placeholder="Sobrenome" type="text" pattern="([a-zA-Z]+[ ]?[\d]*)*">
 						</div>
 						<div class="form-group">
 							<label class="control-label">Data de nascimento</label> <input
@@ -63,7 +63,7 @@
 							<label class="control-label">Local de nascimento</label> <input
 								class="form-control" type="text" name="localNascimento"
 								required="required" placeholder="Local de nascimento"
-								pattern="[a-zA-Z] *">
+								pattern="([a-zA-Z]+[ ]?)*">
 						</div>
 						<div class="form-group">
 							<label class="control-label">Descrição</label>
