@@ -25,6 +25,8 @@ import junit.framework.Assert;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Testes_DAO extends AbstractTransactionalJUnit4SpringContextTests {
 	
+	
+	
 	@Autowired
 	private IPessoaDAO pdao;
 	private static long id ;
