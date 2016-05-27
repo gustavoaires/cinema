@@ -38,9 +38,8 @@ public class PessoaController {
 		if (pessoa != null) {
 			model.addAttribute("pessoa", pessoa);
 			return "pessoa/altera_pessoa";
-		} else {
-			return "redirect:listarPessoa";
 		}
+		return "redirect:erro";
 	}
 	
 	@RequestMapping("/alteraPessoaFormulario")
@@ -65,7 +64,15 @@ public class PessoaController {
 	@RequestMapping("/visualizarPessoa")
 	public String visualizarPessoa(Long id, Model model) {
 		Pessoa pessoa = daoPessoa.recuperar(id);
-		model.addAttribute("pessoa", pessoa);
-		return "pessoa/visualiza_pessoa";
+		if (pessoa != null) {
+			model.addAttribute("pessoa", pessoa);
+			return "pessoa/visualiza_pessoa";
+		}
+		return "redirect:erro";
+	}
+	
+	@RequestMapping("/erro")
+	public String erro() {
+		return "erro";
 	}
 }
