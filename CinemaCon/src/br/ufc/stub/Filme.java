@@ -32,40 +32,30 @@ public class Filme {
 	private String nome;
 	private String sinopse;
 	
-	public String getSinopse() {
-		return "Duas pessoas que vivem numa ilha";
-	}
+	public String getSinopse() { return "Duas pessoas que vivem numa ilha"; }
 	public void setSinopse(String sinopse) {}
-	public List<Pessoa> getPessoas() {
-		return new ArrayList<>();
-	}
+	
+	public List<Pessoa> getPessoas() { return new ArrayList<>(); }
 	public void setPessoas(List<Pessoa> pessoas) {}
-	public String getGenero() {
-		return "Sessão da tarde";
-	}
+	
+	public String getGenero() { return "Sessão da tarde"; }
 	public void setGenero(String genero) {}
-	public Double getDuracao() {
-		return 1D;
-	}
+	
+	public Double getDuracao() { return 1D; }
 	public void setDuracao(Double duracao) {}
-	public Integer getClassificacao() {
-		return 1;
-	}
+	
+	public Integer getClassificacao() { return 1; }
 	public void setClassificacao(Integer classificacao) {}
-	public String getDistribuidora() {
-		return "Paramount";
-	}
+	
+	public String getDistribuidora() { return "Paramount"; }
 	public void setDistribuidora(String distribuidora) {}
-	public String getIdioma() {
-		return "Portugues";
-	}
+	
+	public String getIdioma() { return "Portugues"; }
 	public void setIdioma(String idioma) {}
-	public Long getId() {
-		return 1L;
-	}
-	public String getNome() {
-		return "Lagoa azul";
-	}
-	public void setNome(String nome) {}
+	
+	public Long getId() { return 1L; }
 	public void setId(Long id) {}
+	
+	public String getNome() { return "Lagoa azul"; }
+	public void setNome(String nome) {}
 }
