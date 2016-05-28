@@ -32,7 +32,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="navbar-ex-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="">Erro</a></li>
+					<li class="active"><a href="#">Erro</a></li>
 					<li><a href="listarPessoa">Listar Pessoas</a></li>
 				</ul>
 			</div>

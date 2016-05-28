@@ -33,7 +33,7 @@ public class Filme {
 	private String sinopse;
 	
 	public String getSinopse() {
-		return "";
+		return "Duas pessoas que vivem numa ilha";
 	}
 	public void setSinopse(String sinopse) {}
 	public List<Pessoa> getPessoas() {
@@ -41,7 +41,7 @@ public class Filme {
 	}
 	public void setPessoas(List<Pessoa> pessoas) {}
 	public String getGenero() {
-		return "";
+		return "Sessão da tarde";
 	}
 	public void setGenero(String genero) {}
 	public Double getDuracao() {
@@ -53,18 +53,18 @@ public class Filme {
 	}
 	public void setClassificacao(Integer classificacao) {}
 	public String getDistribuidora() {
-		return "";
+		return "Paramount";
 	}
 	public void setDistribuidora(String distribuidora) {}
 	public String getIdioma() {
-		return "";
+		return "Portugues";
 	}
 	public void setIdioma(String idioma) {}
 	public Long getId() {
 		return 1L;
 	}
 	public String getNome() {
-		return null;
+		return "Lagoa azul";
 	}
 	public void setNome(String nome) {}
 	public void setId(Long id) {}
