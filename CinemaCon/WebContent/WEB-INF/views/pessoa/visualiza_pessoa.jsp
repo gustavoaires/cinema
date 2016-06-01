@@ -54,7 +54,7 @@
 			</div>
 		</div>
 	</div>
-	<c:if test="${not empty pessoa.filmes}">
+	<c:if test="${not empty filmes}">
 		<h1 class="text-center">Filmes que ${pessoa.nome} participou</h1>
 		<div class="section">
 			<div class="container table-responsive">
@@ -70,7 +70,7 @@
 									<th>Duração</th>
 								</tr>
 							</thead>
-							<c:forEach var="f" items="${pessoa.filmes}">
+							<c:forEach var="f" items="${filmes}">
 								<tr>
 									<td><a href="visualizarFilmes?id=${f.id}">${f.nome}</a></td>
 									<td>${f.genero}</td>
@@ -85,7 +85,7 @@
 			</div>
 		</div>
 	</c:if>
-	<c:if test="${empty pessoa.filmes}">
+	<c:if test="${empty filmes}">
 		<h2 class="text-warning col-md-offset-3">Esta pessoa ainda não possui filmes no sistema :(</h2>
 	</c:if>
 	

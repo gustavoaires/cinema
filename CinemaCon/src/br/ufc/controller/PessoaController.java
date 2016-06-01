@@ -1,6 +1,5 @@
 package br.ufc.controller;
 
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,6 +67,7 @@ public class PessoaController {
 		Pessoa pessoa = daoPessoa.recuperar(id);
 		if (pessoa != null) {
 			model.addAttribute("pessoa", pessoa);
+			model.addAttribute("filmes", pessoa.filmesQueParticipou());
 			return "pessoa/visualiza_pessoa";
 		}
 		return "redirect:erro";

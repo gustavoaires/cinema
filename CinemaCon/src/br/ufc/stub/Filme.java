@@ -21,16 +21,11 @@ public class Filme {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
-	@ManyToMany(mappedBy="filmes", fetch=FetchType.LAZY)
-	private List<Pessoa> pessoas;
+	@ManyToMany(mappedBy="filmesPessoaDiretor", fetch=FetchType.LAZY)
+	private List<Pessoa> diretores;
 	
-	private String genero;
-	private Double duracao;
-	private Integer classificacao;
-	private String distribuidora;
-	private String idioma;
-	private String nome;
-	private String sinopse;
+	@ManyToMany(mappedBy="filmesPessoaAtor", fetch=FetchType.LAZY)
+	private List<Pessoa> atores;
 	
 	public String getSinopse() { return "Duas pessoas que vivem numa ilha"; }
 	public void setSinopse(String sinopse) {}
@@ -58,4 +53,10 @@ public class Filme {
 	
 	public String getNome() { return "Lagoa azul"; }
 	public void setNome(String nome) {}
+	
+	public List<Pessoa> getDiretores() { return new ArrayList<>(); }
+	public void setDiretores(List<Pessoa> diretores) {}
+	
+	public List<Pessoa> getAtores() { return new ArrayList<>(); }
+	public void setAtores(List<Pessoa> atores) {}
 }

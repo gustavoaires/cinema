@@ -34,12 +34,20 @@ public class Pessoa {
 	private String descricao;
 	
 	@ManyToMany(fetch=FetchType.EAGER)
-	@JoinTable(name="filme_pessoa",
+	@JoinTable(name="filme_pessoa_diretor",
 		joinColumns=@JoinColumn(name="id_pessoa",
-							referencedColumnName="id_pessoa"),
+					referencedColumnName="id_pessoa"),
 		inverseJoinColumns=@JoinColumn(name="id_filme",
-						   referencedColumnName="id_filme"))
-	private List<Filme> filmes;
+				   	referencedColumnName="id_filme"))
+	private List<Filme> filmesPessoaDiretor;
+	
+	@ManyToMany(fetch=FetchType.EAGER)
+	@JoinTable(name="filme_pessoa_ator",
+		joinColumns=@JoinColumn(name="id_pessoa",
+					referencedColumnName="id_pessoa"),
+		inverseJoinColumns=@JoinColumn(name="id_filme",
+					referencedColumnName="id_filme"))
+	private List<Filme> filmesPessoaAtor;
 	
 	public Long getId() {
 		return id;
@@ -77,12 +85,19 @@ public class Pessoa {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public void setFilmes(List<Filme> filmes) {
-		this.filmes = filmes;
+	public void setFilmesPessoaAtor(List<Filme> filmes) {
+		this.filmesPessoaAtor = filmes;
 	}
-	public List<Filme> getFilmes() {
-		return filmes;
+	public List<Filme> getFilmesPessoaAtor() {
+		return filmesPessoaAtor;
 	}
+	public List<Filme> getFilmesPessoaDiretor() {
+		return filmesPessoaDiretor;
+	}
+	public void setFilmesPessoaDiretor(List<Filme> filmesPessoaDiretor) {
+		this.filmesPessoaDiretor = filmesPessoaDiretor;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -92,6 +107,7 @@ public class Pessoa {
 		result = prime * result + ((sobrenome == null) ? 0 : sobrenome.hashCode());
 		return result;
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -119,6 +135,12 @@ public class Pessoa {
 		return true;
 	}
 	
-	
+	public List<Filme> filmesQueParticipou() {
+		List<Filme> filmes = filmesPessoaAtor;
+		for (Filme f : filmesPessoaDiretor)
+			if (!filmes.contains(f))
+				filmes.add(f);
+		return filmes;
+	}
 	
 }
