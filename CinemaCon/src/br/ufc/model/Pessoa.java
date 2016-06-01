@@ -85,8 +85,8 @@ public class Pessoa {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public void setFilmesPessoaAtor(List<Filme> filmes) {
-		this.filmesPessoaAtor = filmes;
+	public void setFilmesPessoaAtor(List<Filme> filmesPessoaAtor) {
+		this.filmesPessoaAtor = filmesPessoaAtor;
 	}
 	public List<Filme> getFilmesPessoaAtor() {
 		return filmesPessoaAtor;
