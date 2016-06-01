@@ -51,6 +51,17 @@
 									pessoa!</h2>
 							</c:if>
 							<c:if test="${not empty pessoas}">
+								<thead>
+									<tr>
+										<th>Nome</th>
+										<th>Sobrenome</th>
+										<th>Data de Nascimento</th>
+										<th>Local de Nascimento</th>
+										<th>&nbsp;</th>
+										<th>&nbsp;</th>
+										<th>&nbsp;</th>
+									</tr>
+								</thead>
 								<c:forEach var="p" items="${pessoas}">
 									<tr>
 										<td style="display:none;">${ p.id }</td>
@@ -58,7 +69,6 @@
 										<td>${ p.sobrenome }</td>
 										<td>${ p.dataNascimento }</td>
 										<td>${ p.localNascimento }</td>
-										<td>${ p.descricao }</td>
 										<td><a class="text-success" href="visualizarPessoa?id=${ p.id }">
 											VISUALIZAR</a>
 										</td>

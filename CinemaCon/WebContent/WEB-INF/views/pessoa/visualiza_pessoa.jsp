@@ -43,7 +43,7 @@
 	<div class="section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
+				<div class="col-md-6 col-md-offset-4">
 					<h3>${pessoa.nome} ${pessoa.sobrenome}</h3>
 					<h4>
 						<b>Data de Nascimento: </b>${pessoa.dataNascimento} <br>Local
@@ -65,7 +65,6 @@
 								<tr>
 									<th>Filme</th>
 									<th>Genero</th>
-									<th>Sinopse</th>
 									<th>Classificação</th>
 									<th>Duração</th>
 								</tr>
@@ -74,7 +73,6 @@
 								<tr>
 									<td><a href="visualizarFilmes?id=${f.id}">${f.nome}</a></td>
 									<td>${f.genero}</td>
-									<td>${f.sinopse}</td>
 									<td>${f.classificacao}</td>
 									<td>${f.duracao}</td>
 								</tr>
