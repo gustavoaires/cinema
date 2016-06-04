@@ -64,18 +64,18 @@
 								</thead>
 								<c:forEach var="p" items="${pessoas}">
 									<tr>
-										<td style="display:none;">${ p.id }</td>
-										<td>${ p.nome }</td>
-										<td>${ p.sobrenome }</td>
-										<td>${ p.dataNascimento }</td>
-										<td>${ p.localNascimento }</td>
-										<td><a class="text-success" href="visualizarPessoa?id=${ p.id }">
+										<td style="display:none;">${p.id}</td>
+										<td>${p.nome}</td>
+										<td>${p.sobrenome}</td>
+										<td>${p.dataNascimento}</td>
+										<td>${p.localNascimento}</td>
+										<td><a class="text-success" href="visualizarPessoa?id=${p.id}">
 											VISUALIZAR</a>
 										</td>
-										<td><a class="text-warning" href="alterarPessoa?id=${ p.id }">
+										<td><a class="text-warning" href="alterarPessoa?id=${p.id}">
 											ALTERAR</a>
 										</td>
-										<td><a class="text-danger" href="apagarPessoa?id=${ p.id }">
+										<td><a class="text-danger" href="apagarPessoa?id=${p.id}">
 											REMOVER</a>
 										</td>
 									</tr>
