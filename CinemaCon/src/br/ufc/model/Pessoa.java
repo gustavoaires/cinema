@@ -13,7 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
-import br.ufc.stub.Filme;
+import br.ufc.model.Filme;
 
 @Entity(name="pessoa")
 public class Pessoa {

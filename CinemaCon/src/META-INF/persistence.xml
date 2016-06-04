@@ -4,7 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     version="1.0">
 
-    <persistence-unit name="cinema_con" >
+    <persistence-unit name="projetovv" >
        	<provider>org.hibernate.ejb.HibernatePersistence</provider>
        	<class>br.ufc.model.Pessoa</class>
        	<class>br.ufc.stub.Filme</class>

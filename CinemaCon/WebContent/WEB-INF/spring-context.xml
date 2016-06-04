@@ -18,16 +18,12 @@ http://www.springframework.org/schema/tx/spring-tx.xsd" >
 	<context:component-scan base-package="br.ufc.controller" />
 	<mvc:annotation-driven />
 
-<!-- 	<mvc:interceptors> -->
-<!-- 		<bean class = "br.ufc.interceptor.InterceptadorGeral"/> -->
-<!-- 	</mvc:interceptors> -->
-
-	<!-- <bean id="funcionarioDAO" class="br.ufc.dao.FuncionarioDAOMem"/> -->
+	<bean id="filmeDAO" class="br.ufc.dao.FilmeDao"/>
 	<bean id="pessoaDAO" class="br.ufc.dao.PessoaDAO"/>
 	
 	<bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost/cinema_con" />
+		<property name="url" value="jdbc:mysql://localhost/projetovv" />
 		<property name="username" value="root" />
 		<property name="password" value="root" />
 	</bean> 
