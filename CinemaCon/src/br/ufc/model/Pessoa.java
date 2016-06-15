@@ -13,6 +13,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import br.ufc.model.Filme;
 
 @Entity(name="pessoa")
@@ -26,6 +28,7 @@ public class Pessoa {
 	private String sobrenome;
 	
 	@Column(name="data_nascimento")
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Date dataNascimento;
 	
 	@Column(name="local_nascimento")

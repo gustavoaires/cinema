@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,8 +61,9 @@
 						<div class="form-group">
 							<label class="control-label">Data de nascimento</label> <input
 								class="form-control" type="text" name="dataNascimento"
-								required="required" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$"
-								value="${pessoa.dataNascimento}">
+								required="required" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" 
+								value=<fmt:formatDate pattern="dd/MM/yyyy" value="${pessoa.dataNascimento}"/>>
+								
 						</div>
 						<div class="form-group">
 							<label class="control-label">Local de nascimento</label> <input

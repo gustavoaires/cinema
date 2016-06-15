@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -46,8 +47,8 @@
 				<div class="col-md-6 col-md-offset-4">
 					<h3>${pessoa.nome} ${pessoa.sobrenome}</h3>
 					<h4>
-						<b>Data de Nascimento: </b>${pessoa.dataNascimento} <br>Local
-						de Nascimento: ${pessoa.localNascimento}
+						<b>Data de Nascimento: </b><fmt:formatDate pattern="dd/MM/yyyy" value="${pessoa.dataNascimento}"/> <br>
+						Local de Nascimento: ${pessoa.localNascimento}
 					</h4>
 					<h3><p>${pessoa.descricao}</p></h3>
 				</div>

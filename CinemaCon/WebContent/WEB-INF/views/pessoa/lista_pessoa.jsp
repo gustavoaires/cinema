@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -67,7 +68,7 @@
 										<td style="display:none;">${p.id}</td>
 										<td>${p.nome}</td>
 										<td>${p.sobrenome}</td>
-										<td>${p.dataNascimento}</td>
+										<td><fmt:formatDate pattern="dd/MM/yyyy" value="${p.dataNascimento}"/></td>
 										<td>${p.localNascimento}</td>
 										<td><a class="text-success" href="visualizarPessoa?id=${p.id}">
 											VISUALIZAR</a>

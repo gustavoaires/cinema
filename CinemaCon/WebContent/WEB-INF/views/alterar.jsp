@@ -61,16 +61,16 @@
 							<label class="control-label">Idioma</label>
 							<div class="radio">
 								<label class="radio-inline">
-										<input type="radio" name="idioma" id="ingles" value="Ingles">Inglês&nbsp;</label>
+										<input type="radio" name="idioma" id="ingles" value="Ingles" ${filme.idioma=='Ingles' ? 'checked' : ''}>Inglês&nbsp;</label>
 								<label class="radio-inline"> 
 										<input type="radio" name="idioma" id="espanhol"
-											value="Espanhol">Espanhol&nbsp;</label>
+											value="Espanhol" ${filme.idioma=='Espanhol' ? 'checked' : ''}>Espanhol&nbsp;</label>
 								<label class="radio-inline">
 										<input type="radio" name="idioma" id="portugues"
-											value="Portugues">Português&nbsp;</label>
+											value="Portugues" ${filme.idioma=='Portugues' ? 'checked' : ''}>Português&nbsp;</label>
 								<label class="radio-inline"></label>
 									<input type="radio" name="idioma" id="italiano"
-										value="Italiano">Italiano&nbsp;
+										value="Italiano" ${filme.idioma=='Italiano' ? 'checked' : ''}>Italiano&nbsp;
 								<label class="radio-inline"></label>
 							</div>
 						</div>
@@ -82,15 +82,15 @@
 							<label class="control-label" for="Classificacao">Classificação</label>
 							<div class="radio">
 								<label class="radio-inline"> <input type="radio"
-									name="classificacao" id="10Anos" value="10">10&nbsp;
+									name="classificacao" id="10Anos" value="10" ${filme.classificacao==10 ? 'checked' : ''}>10&nbsp;
 								</label> <label class="radio-inline"> <input type="radio"
-									name="classificacao" id="12Anos" value="12">12&nbsp;
+									name="classificacao" id="12Anos" value="12" ${filme.classificacao==12 ? 'checked' : ''}>12&nbsp;
 								</label> <label class="radio-inline"> <input type="radio"
-									name="classificacao" id="14Anos" value="14">14&nbsp;
+									name="classificacao" id="14Anos" value="14" ${filme.classificacao==14 ? 'checked' : ''}>14&nbsp;
 								</label> <label class="radio-inline"> <input type="radio"
-									name="classificacao" id="16Anos" value="16">16&nbsp;
+									name="classificacao" id="16Anos" value="16" ${filme.classificacao==16 ? 'checked' : ''}>16&nbsp;
 								</label> <label class="radio-inline"> <input type="radio"
-									name="classificacao" id="18Anos" value="18">18&nbsp;
+									name="classificacao" id="18Anos" value="18" ${filme.classificacao==18 ? 'checked' : ''}>18&nbsp;
 								</label>
 							</div>
 						</div>
